@@ -1,0 +1,108 @@
+---
+title: 'Workbook 1: Basic graphics with ggplot'
+output:
+  html_notebook: default
+  html_document: default
+  pdf_document: default
+---
+
+**Set up**
+
+Click on the little green triangle on the right, or use the "Run" command located just under the tabs and watch what happens. (Note: If nothing happens, that's fine too. Not all commands produce an output visible in RNotebooks. Error messages will be displayed, though.)
+```{r setup}
+install.packages("ggplot2") 
+library(ggplot2)
+```
+
+For viewing the data set mpg, provided with ggplot2, we just type its name. 
+
+```{r}
+mpg
+```
+
+mpg is a data set with data on cars, such as the car type, the year the type came to (the US) market, the mileage on highways and in cities, etc. 
+
+Let's look at the components for creating a chart with ggplot2, using a scatterplot as the plot type.
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point()
+```
+
+* mpg is one of the data set that come with ggplot. 
+* Aesthetic mappings: engine displacement is mapped to x axis, mileage (hwy) to the y axis
+* A layer with points as the geometry is added; this is ggplot's way to draw scatterplots. 
+
+The **pattern** shown here is fundamental for gglplot: data and aesthetic mappings are provided in ```ggplot()```, then layers are added with ```+```. 
+
+_________________________________________________________________________________
+
+# Exercises
+
+The solutions are provided by running the code. But make sure you try first to figure things out for yourself. 
+
+## Exercise 1: Describe plot expectations
+
+Describe what you expect to see for each of the following code examples. Sometimes you will have to guess, but common sense should help. Try to imagine what the graph will look like before running the command. Feel free to sketch your expectation on paper first. 
+
+Please fill in the "Description" part now, for the first command below:
+
+**Description:**  I expect to see ....
+
+The run the command.You can run commands by clicking 'Run current chunk' (the triangle on the far right of a code chunk). 
+
+```{r}
+ggplot(mpg, aes(cty, hwy)) + geom_point()
+```
+
+**Question:** How do you interpret what you see in the graph? What do you think is the reason for the data are they way they show up in the graphic? 
+
+
+---------------------------
+**Description:** I expect to see ....
+
+```{r}
+ggplot(diamonds, aes(carat, price)) + geom_point()
+```
+
+**Question:** Is the expectation that the price a diamond increases with the carat visible in the graphic? 
+
+---------------------------
+
+**Description:**
+I expect to see ....
+
+```{r}
+ggplot(economics, aes(date, unemploy)) + geom_line()
+```
+
+____________________________________________________
+## Exercise 2: Complete the code
+
+The following code should plot the relationship betwen (cty), the average city mileage, and (hwy), the averabe highway mileage. Would you please fill in the gaps?
+
+
+```{r}
+ggplot(mpg, aes(......, ........)) + 
+  geom_point()
+
+```
+
+___________________________________________________
+## Exercise 3: Produce a graphic yourself
+
+How would you plot the relationship between ( class ), the type of car,  and ( cyl ), the number of cylinder, from the dataset (mpg) using a scatterplot diagram?
+
+**Solution:**
+```{r}
+
+```
+
+
+_________________________________________________
+
+-End of Workbook1-
+
+![](https://s-media-cache-ak0.pinimg.com/originals/a4/ec/77/a4ec77aaff6467ef286eb640958a641d.jpg)
+
+
