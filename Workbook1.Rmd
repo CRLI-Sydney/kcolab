@@ -1,3 +1,7 @@
+
+# I am making changes to this file - by Erica
+# I try to edit this file and send a pull request - by Erica
+
 ---
 title: 'Workbook 1: Basic graphics with ggplot'
 output:
